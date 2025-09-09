@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<a a href="@Url.Action("claims","Home",new{name="zaraki",age =34})">get info</a>
+
+@if(ViewBag.claims  != null){
+    <p>Claims @ViewBag.claims</p>   
+}else{
+	<p>click above link to get info</p>
+}

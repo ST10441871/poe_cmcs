@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{ 
+	ViewData["Title"] = "Home Page";	
+}
+<a a href="@Url.Action("home","Home",new{name="zaraki",age =34})">get info</a>
+
+<!--display infor-->
+<!--condition to check if username is stored-->
+@if (ViewBag.username != null)
+{
+    <p>Name @ViewBag.username</p>
+    <br />
+    <p> Age @ViewBag.age</p>
+    <br />
+    <p>Number @ViewBag.PhoneNumber</p>
+    <br />
+    <p>Email @ViewBag.email</p>
+    <br/>
+    <p>Address @ViewBag.Address</p>
+}
+else
+{
+    <p>click above link to get info</p>
+}

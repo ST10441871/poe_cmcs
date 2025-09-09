@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<a a href="@Url.Action("contacts","Home",new{name="zaraki",age =34})">get info</a>
+
+<!--display infor-->
+@if (ViewBag.username != null)
+{
+	
+	<p>Number @ViewBag.PhoneNumber</p>
+	<br />
+	<p>Email @ViewBag.email</p>
+	
+	
+}
+else
+{
+	<p>click above link to get info</p>
+})
